@@ -7,6 +7,7 @@
   <button
     role="radio"
     [attr.aria-checked]="value === options.YES"
+    [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
     type="button"
     class="button button-yes"
     [class.button-pressed]="value == options.YES"
@@ -18,6 +19,7 @@
     role="radio"
     type="button"
     class="button button-no"
+    [attr.tabindex]="value === options.NO ? 0 : -1"
     [class.button-pressed]="value == options.NO"
     (click)="activate(options.NO)"
   >
