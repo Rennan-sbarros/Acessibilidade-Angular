@@ -14,7 +14,7 @@ export class AppComponent {
     public formBuilder: FormBuilder
   ){
     this.form = formBuilder.group({
-      yesNoAnswer: ['no']
+      yesNoAnswer: [null]
     })
   }
 
