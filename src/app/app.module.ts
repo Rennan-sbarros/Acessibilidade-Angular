@@ -1,23 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { YesNoButtonGroupModule } from './shared/components/yes-no-button-group/yes-no-button-group.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { KeyboardManagerDirective } from './shared/directives/keyboard-manager.directive';
-import { ModalComponent } from './shared/components/modal/modal.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { ModalModule } from './shared/components/modal/modal.module';
+import { YesNoButtonGroupModule } from './shared/components/yes-no-button-group/yes-no-button-group.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     YesNoButtonGroupModule,
-    ReactiveFormsModule,
     FormsModule,
-    ModalModule
+    ReactiveFormsModule,
+    ModalModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
